@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>WebChat</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Message</servlet-name>
+		<servlet-class>controller.MessageController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Message</servlet-name>
+		<url-pattern>/api/message/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Account</servlet-name>
+		<servlet-class>controller.AccountController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Account</servlet-name>
+		<url-pattern>/account/*</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>History</servlet-name>
+		<servlet-class>controller.HistoryController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>History</servlet-name>
+		<url-pattern>/history/*</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>ProfilerLogger</servlet-name>
+		<servlet-class>controller.ProfilerController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfilerLogger</servlet-name>
+		<url-pattern>/prolog</url-pattern>
+	</servlet-mapping>
+	<!-- sql connect -->
+	<context-param>
+		<param-name>ConnectionString</param-name>
+		<param-value>jdbc:mysql://127.0.0.1:3307/web_chat</param-value>
+	</context-param>
+	<context-param>
+		<param-name>Username</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>Password</param-name>
+		<param-value>hongthai</param-value>
+	</context-param>
+	
+	<servlet>
+	    <description></description>
+	    <display-name>DownloadController</display-name>
+	    <servlet-name>DownloadController</servlet-name>
+	    <servlet-class>controller.DownloadController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>DownloadController</servlet-name>
+	    <url-pattern>/downloadServlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    <servlet-name>FileUploadController</servlet-name>
+    <servlet-class>controller.FileUploadController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FileUploadController</servlet-name>
+    <url-pattern>/fileUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ImageUploadController</servlet-name>
+    <servlet-class>controller.ImageUploadController</servlet-class>
+    <multipart-config>
+               
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImageUploadController</servlet-name>
+    <url-pattern>/imageUploadServlet</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>CRUDController</servlet-name>
+    <servlet-class>controller.CRUDController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>CRUDController</servlet-name>
+	    <url-pattern>/CRUDController</url-pattern>
+	</servlet-mapping>
+
+</web-app>

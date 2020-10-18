@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Html chat</title>
+<link rel='stylesheet' type='text/css' href='css/style.css'>
+<script type='text/javascript' src='js/util.js'></script>
+<script type='text/javascript' src='js/chat.js'></script>
+<script text='text/javascript'></script>
+</head>
+<body>
+	<div id='wrapper'>
+		<!-- khung hiển thị nội dung chat -->
+		<iframe id='output'> </iframe>
+
+		<!-- tuy chinh noi dung hien thi -->
+		<table id='toolbar'>
+			<tr>
+				<td><select id='fontname'>
+						<option value='Font'>Font</option>
+						<option value='Arial'>Arial</option>
+						<option value='Courier'>Courier</option>
+						<option value='Times New Roman'>Times New Roman</option>
+				</select></td>
+
+				<td><select id='fontsize' unselectable='on' selected='0'>
+						<option value='size'>Size</option>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+						<option value='5'>5</option>
+						<option value='6'>6</option>
+						<option value='7'>7</option>
+				</select></td>
+
+				<td>
+					<div id='bold' class='imagebutton'>
+						<img class='image' title='Bold' alt='Bold' src='images/bold.gif' />
+					</div>
+				</td>
+
+				<td>
+					<div id='italic' class='imagebutton'>
+						<img class='image' title='Italic' alt='Italic'
+							src='images/italic.gif' />
+					</div>
+				</td>
+
+				<td>
+					<div id='underline' class='imagebutton'>
+						<img class='image' title='Underline' alt='Underline'
+							src='images/underline.gif' />
+					</div>
+				</td>
+
+				<td>
+					<div id='forecolor' class='imagebutton'>
+						<img class='image' title='Text Color' alt='Text Color'
+							src='images/forecolor.gif' />
+					</div>
+				</td>
+
+				<td><span id='button-choose-icon' rel='toggle'
+					class='emoteTogglerImg'></span></td>
+			<tr>
+		</table>
+		<table cellspacing='0' cellpadding='4' border='0' id='select-icon'>
+			<tr>
+				<td><img border='0' class='inlineimg' title='online'
+					alt='(:-O)' id='vB_Editor_001_smilie_46' src='images/online.gif'
+					style='cursor: pointer;'></td>
+				<td><img border='0' class='inlineimg' title='online'
+					alt='(:-O)' id='vB_Editor_001_smilie_46' src='images/thinking.gif'
+					style='cursor: pointer;'></td>
+				<td><img border='0' class='inlineimg' title='online'
+					alt='(:-O)' id='vB_Editor_001_smilie_46' src='images/wave.gif'
+					style='cursor: pointer;'></td>
+				<td><img border='0' class='inlineimg' title='online'
+					alt='(:-O)' id='vB_Editor_001_smilie_46' src='images/laughing.gif'
+					style='cursor: pointer;'></td>
+			</tr>
+
+		</table>
+
+
+		<!-- khung nhập nội dung chat -->
+		<iframe id='edit'></iframe>
+		<div id='colorpalette' width='250' height='170'
+			style='visibility: hidden; position: absolute; z-index: 99999;'
+			src='colors.html'>
+			<table cellspacing='1' cellpadding='1' border='1'>
+				<tbody>
+					<tr>
+						<td width='20' height='20' bgcolor='#FFFFFF' id='#FFFFFF'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCCCC' id='#FFCCCC'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCC99' id='#FFCC99'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFFF99' id='#FFFF99'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFFFCC' id='#FFFFCC'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#99FF99' id='#99FF99'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#99FFFF' id='#99FFFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CCFFFF' id='#CCFFFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CCCCFF' id='#CCCCFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCCFF' id='#FFCCFF'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#CCCCCC' id='#CCCCCC'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF6666' id='#FF6666'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF9966' id='#FF9966'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFFF66' id='#FFFF66'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFFF33' id='#FFFF33'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#66FF99' id='#66FF99'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#33FFFF' id='#33FFFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#66FFFF' id='#66FFFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#9999FF' id='#9999FF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF99FF' id='#FF99FF'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#C0C0C0' id='#C0C0C0'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF0000' id='#FF0000'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF9900' id='#FF9900'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCC66' id='#FFCC66'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFFF00' id='#FFFF00'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#33FF33' id='#33FF33'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#66CCCC' id='#66CCCC'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#33CCFF' id='#33CCFF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#6666CC' id='#6666CC'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CC66CC' id='#CC66CC'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#999999' id='#999999'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CC0000' id='#CC0000'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FF6600' id='#FF6600'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCC33' id='#FFCC33'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#FFCC00' id='#FFCC00'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#33CC00' id='#33CC00'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#00CCCC' id='#00CCCC'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#3366FF' id='#3366FF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#6633FF' id='#6633FF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CC33CC' id='#CC33CC'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#666666' id='#666666'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#990000' id='#990000'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CC6600' id='#CC6600'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#CC9933' id='#CC9933'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#999900' id='#999900'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#009900' id='#009900'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#339999' id='#339999'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#3333FF' id='#3333FF'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#6600CC' id='#6600CC'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#993399' id='#993399'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#333333' id='#333333'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#660000' id='#660000'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#993300' id='#993300'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#996633' id='#996633'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#666600' id='#666600'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#006600' id='#006600'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#336666' id='#336666'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#000099' id='#000099'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#333399' id='#333399'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#663366' id='#663366'><img
+							width='1' height='1'></td>
+					</tr>
+					<tr>
+						<td width='20' height='20' bgcolor='#000000' id='#000000'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#330000' id='#330000'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#663300' id='#663300'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#663333' id='#663333'
+							style='border: 1px solid gray;'><img width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#333300' id='#333300'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#003300' id='#003300'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#003333' id='#003333'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#000066' id='#000066'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#330099' id='#330099'><img
+							width='1' height='1'></td>
+						<td width='20' height='20' bgcolor='#330033' id='#330033'><img
+							width='1' height='1'></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<input type='button' id='send-button' class='button-disable'
+			value='Send' />
+	</div>
+</body>
+</html>

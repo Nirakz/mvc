@@ -1,0 +1,212 @@
+.chatbox {
+    position: fixed;
+    position: absolute;
+    width: 260px;
+    display:none;
+    font-family: arial,sans-serif;
+}
+
+.chatboxhead {
+    background-color: #404040;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 13px;
+    height: 36px;
+    border: solid transparent;
+    border-width: 1px 1px 1px 6px;
+    box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    line-height: 30px;
+    padding: 0 5px 0 5px;
+}
+
+.chatboxblink {
+    background-color: #176689;
+    border-right:1px solid #176689;
+    border-left:1px solid #176689;
+}
+
+.chatboxcontent {
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    color: #333333;
+    height:220px;
+    width:245px;
+    overflow-y:auto;
+    overflow-x:auto;
+    padding:7px;
+    border-left:1px solid #cccccc;
+    border-right:1px solid #cccccc;
+    border-bottom:1px solid #eeeeee;
+    background-color: #ffffff;
+    line-height: 1.3em;
+}
+
+.chatboxinput {
+    -webkit-transition: background-color ease .218s,box-shadow ease .218s,border ease .218s;
+    transition: background-color ease .218s,box-shadow ease .218s,border ease .218s;
+    background-color: #fff;
+    min-height: 38px;
+    overflow-x: hidden;
+    overflow-y: visible;
+    position: relative;
+    border: 1px solid transparent;
+    border-top: 1px solid #c3c3c3;
+}
+
+.chatboxtextarea {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 28px;
+    margin-right: 41px;
+    -webkit-transition: right .218s ease;
+    padding: 3px 0 3px 5px;
+    background-clip: padding-box;
+    /*    border: solid transparent;
+        border-width: 1px 1px 1px 6px;*/
+    /* box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07); */
+    line-height: 16px;
+    cursor: text;
+    height: 16px;
+    outline: 0;
+    margin-top: 6px;
+    position: relative;
+    word-wrap: break-word;
+    word-break: break-word;
+    width: 68%;
+}
+
+.chatboxtextareaselected {
+    border: 2px solid #f99d39;
+    margin:0;
+}
+
+.chatboxmessage {
+    margin-left:1em;
+}
+
+.chatboxinfo {
+    margin-left:-1em;
+    color:#666666;
+
+}
+
+.chatboxmessagefrom {
+    margin-left:-1em;
+    font-weight: bold;
+}
+
+.chatboxmessagecontent {
+}
+
+.chatboxoptions {
+    float: right;
+}
+
+.chatboxoptions a {
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+    font-family:Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+}
+
+.chatboxoptions #close_chatbox_button{
+    background: url("../images/icons.png") no-repeat scroll -189px 0 transparent;
+    opacity: .6;
+}
+
+.chatboxoptions #toggle_chatbox_button{
+    background: url("../images/icons.png") no-repeat scroll -517px -237px transparent;
+    opacity: .6;
+}
+
+.chatboxtitle {
+    float: left;
+    line-height: 36px;
+    height: 100%;
+    width: 73%;
+    /*padding-left: 5px;*/
+}
+
+.control_button{
+    border: 0 solid transparent;
+    padding: 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+
+}
+
+.control_button:hover{
+    opacity: 1 !important;
+    background-color: #737373 !important;
+}
+
+.input_button{
+    cursor: pointer;
+    margin-top: 2px;
+    -webkit-appearance: none;
+    border: 0 solid transparent;
+    padding: 0;
+}
+
+.select_emotion{
+    position: absolute;
+    left: 8px;
+    text-align: center;
+    top: 8px;
+    bottom: 8px;
+    height: 16px;
+    overflow: visible;
+    width: 16px
+}
+
+.select_picture{
+    position: absolute;
+    right: 25px;
+    text-align: center;
+    top: 8px;
+    bottom: 8px;
+    width: 32px;
+    -webkit-transition: right .318s ease;
+    height: 16px;
+}
+
+.select_file{
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 8px;
+    bottom: 8px;
+    width: 32px;
+    -webkit-transition: right .318s ease;
+    height: 16px;
+}
+
+.bt_emotion{
+    background: no-repeat url(../images/icons.png) -254px -102px;
+    height: 18px;
+    width: 19px;
+}
+
+.bt_emotion:hover{
+    background-position: -168px -298px;
+}
+
+.bt_picture{
+    background: no-repeat url(../images/icons.png) -130px -298px;
+    height: 18px;
+    width: 19px;
+}
+
+.bt_picture:hover{
+    background-position: -310px -23px;
+}
+
+.bt_file{
+    background: no-repeat url(../images/icons.png) -491px -224px;
+    height: 18px;
+    width: 19px;
+    margin-top: 5px;
+}

@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Webchat Servlet</title>
+<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/chatbox.css" />
+<link rel="stylesheet" type="text/css" href="css/emo.css" />
+<link rel="stylesheet" type="text/css" href="css/message.css" />
+<link rel="stylesheet" href="css/jquery.fancybox.css" />
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="js/layout.js"></script>
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/mwheelIntent.js"></script>
+<script type="text/javascript" src="js/emotion.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript">
+	window.onload = initIndex;
+</script>
+</head>
+<body>
+<noscript>
+	<div class="noscript_warn">
+		Trình duyệt của bạn hiện đã tắt javascript vui lòng bật javascript để có thể chat
+	</div>
+</noscript>
+	<div id="toolbar">
+		<div id="curr_u_photo">
+			<img class="curr_u_photo_img" src="images/user_avatar/00000.jpg" />
+		</div>
+		<div id="curr_u_name">
+			Narutoooooo
+		</div>
+		<div>
+			<a id="logout_url" href="#">Đăng xuất</a>
+		</div>
+	</div>
+	<input type="hidden" id="myID" value="00000">
+	<div id="list_friend" class="list">
+		<div id="list_friend_title">
+			<div class="list_friend_title_icon"></div>
+			<div class="list_friend_title_name">List friend</div>
+		</div>
+		
+		<div class="list_error_connect">
+			Không thể kết nối với máy chủ
+			<div>Đang thử kết nối lại</div>
+			<div class="wrap_reconnect_bt">
+				<button class="reconnect_bt"></button>
+			</div>
+		</div>
+		
+		<div id="list_friend_content" class="list_friend_content_area">
+	
+			 <div id="00000" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00000.jpg" />
+				</div>
+				<div class="user_name">tao</div>
+				<!-- <div class="user_online"></div> -->
+			</div>
+			
+			<div id="00001" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00001.jpg" />
+				</div>				
+				<div class="user_name">du du</div>
+				
+			</div>
+
+			<div id="00002" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00002.jpg" />
+				</div>
+				<div class="user_name">cam chanh</div>
+				
+			</div>
+
+			<div id="00003" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00003.jpg" />
+				</div>
+				<div class="user_name">dua hau</div>
+				
+			</div>
+			<div id="00004" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00000.jpg" />
+				</div>
+				<div class="user_name">tao</div>
+				<!-- <div class="user_online"></div> -->
+			</div>
+			
+			<div id="00005" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00001.jpg" />
+				</div>				
+				<div class="user_name">du du</div>
+				
+			</div>
+
+			<div id="00006" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00002.jpg" />
+				</div>
+				<div class="user_name">cam chanh</div>
+				
+			</div>
+
+			<div id="00007" class="list_friend_item">
+				<div class="user_avatar">
+					<img src="images/user_avatar/00003.jpg" />
+				</div>
+				<div class="user_name">dua hau</div>
+				
+			</div>
+		</div>
+		<div id="search_friend">
+			<input type="text" id="search_friend_field" placeholder="Tìm kiếm"
+				name="search_friend_field" />
+		</div>
+		<div class="wrap_notify">
+		</div>
+	</div>
+</body>
+</html>
